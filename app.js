@@ -12,7 +12,6 @@ const size = carouselImages[0].clientWidth;
 // move one photo ahead
 carouselSlider.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
-// button listeners
 // next button 
 nextBtn.addEventListener('click', () => {
   carouselSlider.style.transition = "transform 0.4s ease-in-out"
@@ -25,4 +24,17 @@ prevBtn.addEventListener('click', () => {
     carouselSlider.style.transition = "transform 0.4s ease-in-out"
     counter--;
     carouselSlider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+carouselSlider.addEventListener('transitioned', () => {
+    if (carouselImages[counter].id === 'lastClone') {
+        carouselSlider.style.transition = "none";
+        counter = carouselImages.length - 2;
+        carouselSlider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+    if (carouselImages[counter].id === 'firstClone') {
+        carouselSlider.style.transition = "none";
+        counter = carouselImages.length - counter;
+        carouselSlider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
 });
