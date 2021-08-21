@@ -5,26 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css" />
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Image Slider with JS</title>
 </head>
 <body>
     <div class="carousel">
+          <!--carousel buttons-->
+          <i class="fas fa-arrow-left" id="previousBtn"></i>
+          <i class="fas fa-arrow-right" id="nextBtn"></i>
         <div class="carousel-slider">
-           <!--clone img--> 
-           <img src="img/fruits5.jpg" id="lastClone" alt="fruits5" /> 
+           <img src="img/fruits5.jpg" id="lastClone" alt="fruits" /> 
            <img src="img/fruits1.jpg" alt="fruits">
            <img src="img/fruits2.jpg" alt="fruits">
            <img src="img/fruits3.jpg" alt="fruits">
            <img src="img/fruits4.jpg" alt="fruits">
-           <img src="img/fruits5.jpg" alt="fruits">
-            <!--clone img--> 
-           <img src="img/fruits1.jpg" id="firstClone" alt="fruits1" /> 
+           <img src="img/fruits5.jpg" alt="fruits"> 
+           <img src="img/fruits1.jpg" id="firstClone" alt="fruits" /> 
         </div>
     </div>
-    <!--carousel buttons-->
-    <button id="prevBtn">Prev</button>
-    <button id="nextBtn">Next</button>
-
     <script src="app.js"></script>
 </body>
 </html>
